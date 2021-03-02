@@ -1,14 +1,37 @@
+<h1>{{title}}</h1>
+<h5>{{obj.name}}</h5>
+<h5>{{arraytest}}</h5>
+<h5 *ngIf="show; else elseBlock">I am the best</h5>
+<ng-template #elseBlock >
+    <h5>You are best</h5>
+</ng-template>
+<div [ngSwitch]="color">
+<h6 *ngSwitchCase="'red'" style="color: red">Red Color</h6>
+</div>
+<div *ngFor='let x of Fruits'>
+    {{x}}
+</div>
 <div>
     header
 </div>
+<div>
+    <button (click)="clickMebutton()">Click Me</button>
+</div>
+
 
 <div>
     <a class="nav-item nav-link" routerLink="/">Dashboard</a>
     <a class="nav-item nav-link" routerLink="login">Login</a>
+    <a class="nav-item nav-link" routerLink="register">Register Now</a>
 </div>
 <div>
     footer
 </div>
 <div>
     <router-outlet></router-outlet>
+    <!-- <app-dashboard></app-dashboard> -->
 </div>
+<!-- <app-register-component [hero]></app-register-component> -->
+
+<!-- for getting parent data to child component -->
+<!-- <app-register *ngFor="let x of heros" [hero]="x"></app-register> -->

@@ -6,10 +6,10 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="col-md-6">
-                    <form name="loginForm">
+                    <form name="loginForm" [formGroup]='loginForm'>
                         <h3>Login</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Email" placeholder="Email" ng-model="user.Email">
+                            <input type="text" class="form-control" name="Email" placeholder="Email" (keyup)="getvalues($event)" ng-model="user.Email">
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" name="Password" id="pwd" placeholder="Password">

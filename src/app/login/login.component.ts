@@ -11,5 +11,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+getvalues(val)
+{
+console.warn(val.target.value)
+}
+loginForm:'abc'
 }

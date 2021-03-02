@@ -1,1 +1,20 @@
 <p>register works!</p>
+<form [formGroup]='RegisInfo' (ngSubmit)="OnSubmit(RegisInfo.value)">
+    <h3>Login</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="Name" placeholder="Name" >
+        <label *ngIf="Name.invalid && (Name.dirty || Name.touched)">Name is required</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="EmailId" id="pwd" placeholder="Email Id">
+        <label *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched)">Invalid EmailId</label>
+    </div>
+    <p>
+        <input type="submit" class="btn emg-btn log-in full" value="Login">
+    </p>
+</form>
+<div>{{hero}}</div>
+<!-- <app-root *ngIf="shows"></app-root> -->
+
+
+

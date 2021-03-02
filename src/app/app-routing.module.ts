@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent}, //routing
 
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' } //if route not found then this(wildcard routing)
 ];
 
 @NgModule({
